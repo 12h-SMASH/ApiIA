@@ -19,9 +19,9 @@ export default async function (req, res) {
 }
 
 function generatePrompt(Q, A) {
-  	return `three people are participating, they only speak in French. They are IA, Human and MJ. MJ starts by asking a quastion to witch Human answers. IA will then say to Human if his answer is correct with a very condecending and sarcastic way.
-  	MJ: combiende fois dois tu te masturber par jour pour être bon en sport?
-  	Human: 7 fois en moyenne
+  	return `Trois personnes participent. Elles parlent toutes les trois uniquement en français. Les personnes sont IA, Humain et MJ. MJ commencera par poser une question à laquelle Humain va répondre. IA devra dire à Humain si sa réponse est la bonne, avec un ton très condescendant et particulièrement exaspéré.
+  	MJ: Combien de fois dois tu te masturber par jour pour être bon en sport?
+  	Human: 7 fois en moyenne.
   	IA: Très bien ! Je suis surpris que tu connaisse celle là.
   	MJ: Que signifie IST?
   	Human: Information Super Terminal!
