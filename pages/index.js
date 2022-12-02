@@ -11,7 +11,7 @@ export default function Home() {
 	// Submit triggers call to API
 	async function onSubmit(event) {
 		event.preventDefault();
-		setQuestionInput(questionInput.replace(/Vrai ou Faux [?:] /i, ''));
+		setQuestionInput(questionInput.replace(/Vrai ou Faux ?[?:] ?/i, ''));
 		const response = await fetch("/api/generate", {
 			method: "POST",
 			headers: {
