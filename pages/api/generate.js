@@ -1,10 +1,12 @@
 import { Configuration, OpenAIApi } from "openai";
 
+// importation de la clef API
 const configuration = new Configuration({
 	apiKey: process.env.OPENAI_API_KEY,
 });
 const openai = new OpenAIApi(configuration);
 
+// envoie de la demande à OpenIA
 export default async function (req, res) {
 	const completion = await openai.createCompletion({
 		model: "text-davinci-003",
@@ -18,6 +20,7 @@ export default async function (req, res) {
   	res.status(200).json({ result: completion.data.choices[0].text });
 }
 
+// constructeur de la prompt qui va être envoyé à OpenIA
 function generatePrompt(Q, A) {
   	return `Une question et une réponse sont données ci-dessous. Juger leur corrélation avec condéscendance.
 Question: Que signifie IST ?
