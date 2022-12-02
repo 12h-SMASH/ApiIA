@@ -8,18 +8,19 @@ export default function Home() {
 	const [answerInput, setAnswerInput] = useState("");
 	const [result, setResult] = useState();
 
-	//
+	// Submit triggers call to API
 	async function onSubmit(event) {
 		event.preventDefault();
-	const response = await fetch("/api/generate", {
-		method: "POST",
-		headers: {
-			"Content-Type": "application/json",
-		},
-		body: JSON.stringify({ question: questionInput, answer: answerInput })
-	});
-	const data = await response.json();
-	setResult(data.result);
+		setQuestionInput(questionInput.replace(/Vrai ou Faux [?:] /i, ''));
+		const response = await fetch("/api/generate", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify({ question: questionInput, answer: answerInput })
+		});
+		const data = await response.json();
+		setResult(data.result);
 	}
 
 	return (
