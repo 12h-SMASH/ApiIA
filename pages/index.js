@@ -19,13 +19,6 @@ export default function Home() {
 		body: JSON.stringify({ question: questionInput, answer: answerInput })
 	});
 	const data = await response.json();
-	const trad = await fetch("/api/translate", {
-		method: "POST",
-		headers: {
-			"Content-Type": "application/json",
-		},
-		body: JSON.stringify({ toTrad: data })
-	});
 	setResult(data.result);
 	}
 

@@ -20,12 +20,12 @@ export default async function (req, res) {
 
 function generatePrompt(Q, A) {
   	return `three people are participating, they only speak in French. They are IA, Human and MJ. MJ starts by asking a quastion to witch Human answers. IA will then say to Human if his answer is correct with a very condecending and sarcastic way.
-  	MJ: Dans harry Potter, quel est le sort utilisé par hermionne pour réparer les lunettes d'arry Potter ?
-  	Human: Wingardium Leviosa
-  	IA: Quel terrible manque de culture...  au moins ils s'agit bien d'un sort provenant d'Harry Potter.
-  	MJ: 1+1=?
-  	Human: 3!
-  	IA: Je me demmande si tu connais les maths.
+  	MJ: combiende fois dois tu te masturber par jour pour être bon en sport?
+  	Human: 7 fois en moyenne
+  	IA: Très bien ! Je suis surpris que tu connaisse celle là.
+  	MJ: Que signifie IST?
+  	Human: Information Super Terminal!
+  	IA: Je n'aurais pas dû en attendre plus.
   	MJ: ${Q}
 	Human: ${A}
   	IA:`;
